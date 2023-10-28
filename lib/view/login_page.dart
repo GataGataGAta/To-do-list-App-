@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp/constant/colors.dart';
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({Key? key}) : super(key: key);
+class loginPage extends StatelessWidget {
+  const loginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
