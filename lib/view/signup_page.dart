@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp/constant/colors.dart';
 
-class loginPage extends StatelessWidget {
-  const loginPage({Key? key}) : super(key: key);
+class signupPage extends StatelessWidget {
+  const signupPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class loginPage extends StatelessWidget {
             ),
             const Center(
               child: Text(
-                'Log in',
+                'Sign up',
                 style: TextStyle(
                   fontSize: 60,
                 ),
@@ -83,33 +83,14 @@ class loginPage extends StatelessWidget {
             ),
             const SizedBox(
               width: double.infinity,
-              height: 20,
-            ),
-            SizedBox(
               height: 60,
-              width: 300,
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.black,
-                ),
-                onPressed: () {},
-                child: const Text(
-                  'Forgot password?',
-                  style: TextStyle(
-                      fontSize: 30, color: Color.fromARGB(255, 0, 0, 139)),
-                ),
-              ),
-            ),
-            const SizedBox(
-              width: double.infinity,
-              height: 20,
             ),
             SizedBox(
               height: 80,
               width: 200,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.black, //R:236 G:227 B:206
+                  foregroundColor: Colors.black, //R:6 G:145 B:65
                   backgroundColor: const Color.fromARGB(255, 6, 145, 65),
                   shape: BeveledRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -117,7 +98,7 @@ class loginPage extends StatelessWidget {
                 ),
                 onPressed: () {},
                 child: const Text(
-                  'Log in',
+                  'Sign up', //R:242 G:172 B:8
                   style: TextStyle(fontSize: 45),
                 ),
               ),
