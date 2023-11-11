@@ -26,3 +26,7 @@ linter:
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
+
+dependencies:
+  cloud_firestore: ^4.4.0
+  provider: ^5.0.0

@@ -1,0 +1,49 @@
+[33mcommit 9df73bd3bd2700dc37eb0bcb83f2a1fe2ac910ed[m[33m ([m[1;36mHEAD -> [m[1;32mDevlop/todolist[m[33m)[m
+Author: kwanseiSoon <shun.takamiya.official919@outlook.jp>
+Date:   Tue Nov 7 01:11:32 2023 +0900
+
+    feature/58
+    
+    格言画面へ飛ぶように修正
+
+[33mcommit 4e5b409e6d0b45ecec6b8197c31e2d991cc0d2f4[m[33m ([m[1;31morigin/Devlop/todolist[m[33m)[m
+Merge: f1afb22 77c47a6
+Author: Hayato-Yamagata <122955121+GataGataGAta@users.noreply.github.com>
+Date:   Sun Oct 29 13:04:10 2023 +0900
+
+    Merge pull request #2 from GataGataGAta/feature/signup_page
+    
+    signupページを作成
+
+[33mcommit 77c47a6f2d26ee4ae7aa24b2b6879fd0536afcd4[m
+Author: gata <hayato.yamagata@icloud.com>
+Date:   Sun Oct 29 13:02:17 2023 +0900
+
+    signupページを作成
+
+[33mcommit f1afb22bea15e024ba325554283ae209584b0796[m
+Merge: 8bac2f9 26267e1
+Author: Hayato-Yamagata <122955121+GataGataGAta@users.noreply.github.com>
+Date:   Sat Oct 28 16:41:11 2023 +0900
+
+    Merge pull request #1 from GataGataGAta/feature/firstpage
+    
+    Feature/firstpage
+
+[33mcommit 26267e16a8da5af35369ada32213c6132c00daec[m
+Author: gata <hayato.yamagata@icloud.com>
+Date:   Sat Oct 28 16:40:05 2023 +0900
+
+    test
+
+[33mcommit 142a8b665be8ffe630601a7012e6aaad2cdba7d0[m
+Author: gata <hayato.yamagata@icloud.com>
+Date:   Sat Oct 28 16:36:06 2023 +0900
+
+    ログインページを作成
+
+[33mcommit 8bac2f9148fd74dac144210e0b75beba64c3b0d8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: gata <hayato.yamagata@icloud.com>
+Date:   Sat Oct 28 14:27:49 2023 +0900
+
+    first commit
