@@ -12,8 +12,5 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(const MaterialApp(home: loginPage()));
+  runApp(MaterialApp(home: loginPage()));
 }
-
-// Get a reference your Supabase client
-final supabase = Supabase.instance.client;

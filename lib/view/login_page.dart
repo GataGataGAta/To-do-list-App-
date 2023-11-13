@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp/constant/colors.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:todoapp/view/signup_page.dart';
+import 'package:todoapp/view/test.dart';
+import 'package:todoapp/authenticator.dart';
 
 class loginPage extends StatelessWidget {
-  const loginPage({Key? key}) : super(key: key);
+  loginPage({Key? key}) : super(key: key);
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -92,7 +99,13 @@ class loginPage extends StatelessWidget {
                 style: TextButton.styleFrom(
                   foregroundColor: Colors.black,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => signupPage(),
+                    ),
+                  );
+                },
                 child: const Text(
                   'Forgot password?',
                   style: TextStyle(
@@ -115,7 +128,21 @@ class loginPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () async {
+                  final _result = await authenticator.emailSignIn(
+                      email: _emailController.text,
+                      password: _passController.text);
+                  if (_result == true) {
+                    // ignore: use_build_context_synchronously
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => test(),
+                      ),
+                    );
+                  } else if (_result == false) {
+                    //エラーメッセージ
+                  }
+                },
                 child: const Text(
                   'Log in',
                   style: TextStyle(fontSize: 45),

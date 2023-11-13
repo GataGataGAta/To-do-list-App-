@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:todoapp/constant/colors.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:todoapp/authenticator.dart';
+import 'package:todoapp/view/test.dart';
 
 class signupPage extends StatelessWidget {
-  const signupPage({Key? key}) : super(key: key);
+  signupPage({Key? key}) : super(key: key);
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +52,7 @@ class signupPage extends StatelessWidget {
             SizedBox(
               width: 360,
               child: TextField(
+                controller: _emailController,
                 decoration: InputDecoration(
                     hintText: "User ID",
                     border: OutlineInputBorder(
@@ -74,6 +81,7 @@ class signupPage extends StatelessWidget {
             SizedBox(
               width: 360,
               child: TextField(
+                controller: _passController,
                 decoration: InputDecoration(
                     hintText: "passward",
                     border: OutlineInputBorder(
@@ -96,7 +104,22 @@ class signupPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () async {
+                  if (_emailController.text.isNotEmpty &&
+                      _passController.text.isNotEmpty) {
+                    await authenticator.signUp(
+                        email: _emailController.text,
+                        password: _passController.text);
+                    debugPrint("test1");
+                    // await authenticator.emailSignIn(
+                    //     email: _emailController.text,
+                    //     password: _passController.text);
+                    debugPrint(
+                        FirebaseAuth.instance.currentUser?.uid.toString());
+                    //   await Navigator.of(context).push(
+                    //       MaterialPageRoute(builder: ((context) => test())));
+                  }
+                },
                 child: const Text(
                   'Sign up', //R:242 G:172 B:8
                   style: TextStyle(fontSize: 45),
