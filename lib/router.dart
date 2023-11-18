@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:todoapp/importer.dart';
+import 'package:todoapp/view/add_page.dart';
 import 'package:todoapp/view/list_page.dart';
 import 'package:todoapp/view/login_page.dart';
 
@@ -18,6 +19,14 @@ final GoRouter MyRouter = GoRouter(
             return const listPage();
           },
         ),
+        
+        GoRoute(
+          path: 'add',
+          builder: (BuildContext context, GoRouterState state) {
+            return const addPage();
+          },
+        ),
+
       ],
     ),
   ],
