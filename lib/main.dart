@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:todoapp/view/list_page.dart';
 import 'package:todoapp/view/login_page.dart';
 import 'package:todoapp/view/signup_page.dart';
+import 'router.dart';
 
-Future<void> main() async {
-  await Supabase.initialize(
-    url: 'https://xyzcompany.supabase.co',
-    anonKey: 'public-anon-key',
-  );
-
-  runApp(const MaterialApp(home: listPage()));
+void main() {
+  runApp(MaterialApp(home: start()));
 }
 
-// Get a reference your Supabase client
-final supabase = Supabase.instance.client;
+//画面の情報を定義する
+
+class start extends StatelessWidget {
+  const start({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      routerConfig: MyRouter,
+    );
+  }
+}
