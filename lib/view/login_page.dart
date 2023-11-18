@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:todoapp/constant/colors.dart';
 
 class loginPage extends StatelessWidget {
@@ -115,7 +116,9 @@ class loginPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  context.go('/list');
+                },
                 child: const Text(
                   'Log in',
                   style: TextStyle(fontSize: 45),
